@@ -264,8 +264,8 @@ Open your Fusion instance and explore:
         Legal Entity Name
         Registration details (if visible)
         Associated Ledger (if visible)
-        REST API Exploration
 
+REST API Exploration
 Open Postman
 -----
     Try these endpoints if your environment exposes them:
