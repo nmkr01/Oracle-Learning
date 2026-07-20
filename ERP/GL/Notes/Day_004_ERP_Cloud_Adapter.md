@@ -287,5 +287,4 @@ Tomorrow, we'll move into Day 5 – Building a Complete Journal Import Integrati
 Modification
 Testing GitHub OIC Integration
 
-new commmit wrwe
-new fileweqwqe
+new commmit
