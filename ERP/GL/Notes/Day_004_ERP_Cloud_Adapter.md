@@ -281,3 +281,7 @@ Answer these without searching.
    * Polling ensures the integration waits for ERP processing to complete before moving to the next step.
 
 Tomorrow, we'll move into Day 5 – Building a Complete Journal Import Integration in OIC, where you'll design the integration step by step using real OIC components and mapping logic.
+
+-------------
+
+Modification
