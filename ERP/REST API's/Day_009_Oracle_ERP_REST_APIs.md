@@ -1,11 +1,9 @@
 📘 Day 9 – Oracle ERP REST APIs in Oracle Integration Cloud (OIC)
-
 After learning **Business Eventsand **BI Publisher**, today we'll learn the third major Oracle ERP integration pattern: **REST APIs**.
 
 ---
 
 🎯 Learning Objectives
-
 By the end of Day 9, you'll understand:
 
 * What Oracle ERP REST APIs are.

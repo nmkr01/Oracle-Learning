@@ -356,6 +356,74 @@ Quiz
     3. Explain the structure of a SOAP Envelope.
     4. What is the purpose of `ErpIntegrationService` in Oracle ERP?
     5. How would you design an OIC integration to upload an FBDI ZIP file, submit an ESS Job, and handle SOAP Faults without stopping the integration?
+
+    Ans : 
+                                    FTP Trigger
+                                        │
+                                        ▼
+                                    Read Journal CSV
+                                        │
+                                        ▼
+                                    Stage File
+                                        │
+                                        ▼
+                                    Generate ZIP
+                                        │
+                                        ▼
+                                    SOAP Adapter
+                                    UploadFileToUCM
+                                        │
+                                        ▼
+                                    Receive File ID
+                                        │
+                                        ▼
+                                    SOAP Adapter
+                                    submitESSJob
+                                        │
+                                        ▼
+                                    Receive Request ID
+                                        │
+                                        ▼
+                                    Wait (30 sec)
+                                        │
+                                        ▼
+                                    getESSJobStatus
+                                        │
+                                        ▼
+                                    Completed?
+                                    ┌────┴─────┐
+                                    │          │
+                                    Yes         No
+                                    │          │
+                                    ▼          ▼
+                                    Email   Scope Fault Handler
+                                            │
+                                            ├── Log SOAP Fault
+                                            ├── Retry (if applicable)
+                                            ├── Notify Support
+                                            └── Archive Failed File
+---------------------
+
+⭐ Senior Interview Scenario
+Imagine you're importing 1 million journal lines into Oracle ERP.
+The interviewer asks:
+    "What if the submitESSJob SOAP service succeeds, but the ESS Job fails due to validation errors in the FBDI file? How would you design the integration?"
+
+A strong answer would be:
+        Upload the ZIP to UCM.
+        Submit the ESS Job.
+        Poll the job status until completion.
+        If the job fails:
+        Retrieve the ESS job log or output file.
+        Parse validation errors.
+        Archive the failed ZIP and log files.
+        Send a detailed email with the Request ID, error summary, and failed file name.
+        Allow the integration to complete gracefully instead of terminating unexpectedly.
+        If successful:
+        Archive the processed file.
+        Send a success notification with the ESS Request ID.
+
+This kind of answer demonstrates that you understand not only OIC activities but also enterprise-grade error handling and operational support, which interviewers value for experienced Oracle Integration developers.
 ---
 
 🚀 What's Coming Next
