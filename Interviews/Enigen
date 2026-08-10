@@ -1,0 +1,271 @@
+Based on the job description and your current experience (OIC, Oracle Fusion ERP, OCI, ATP, BI Publisher, REST/SOAP, SQL), you already match **around 75–80%** of the role. The main gaps are **Oracle GoldenGate**, deeper **PL/SQL**, and **Git**.
+
+## Skills You Already Have ✅
+
+* Oracle Integration Cloud (OIC)
+* REST & SOAP Adapters
+* Oracle ERP Adapter
+* Oracle Fusion ERP Integrations
+* Oracle ATP
+* BI Publisher
+* SQL
+* REST APIs
+* SOAP Web Services
+* JSON, XML
+* OCI Basics
+* OCI API Gateway
+* Error Handling
+* Connectivity Agent
+* Monitoring
+
+These are strong matches for the role.
+
+---
+
+# Skills You Should Learn Before the Interview
+
+## 1. Oracle GoldenGate ⭐⭐⭐⭐⭐ (Highest Priority)
+
+This is the biggest gap in the JD.
+
+Learn:
+
+* What is Oracle GoldenGate?
+* Architecture
+
+  * Manager
+  * Extract
+  * Data Pump
+  * Replicat
+* Trail Files
+* Checkpoints
+* Initial Load
+* Real-time Replication
+* Active-Active Replication
+* GGSCI Commands
+* Parameter Files
+* Integrated Extract
+* Integrated Replicat
+
+Interview Questions:
+
+* What is GoldenGate?
+* Explain Extract and Replicat.
+* What is Data Pump?
+* Difference between GoldenGate and OIC.
+* How does GoldenGate achieve near real-time replication?
+
+Spend **2–3 days** on this.
+
+---
+
+## 2. PL/SQL ⭐⭐⭐⭐⭐
+
+The JD specifically mentions:
+
+* Packages
+* Procedures
+* Functions
+
+Revise:
+
+* Procedures
+* Functions
+* Packages
+* Cursors
+* Exception Handling
+* Bulk Collect
+* FORALL
+* MERGE
+* Dynamic SQL
+
+---
+
+## 3. SQL Optimization ⭐⭐⭐⭐
+
+Learn:
+
+* Indexes
+* Explain Plan
+* Joins
+* Analytic Functions
+* Performance Tuning
+
+---
+
+## 4. OIC Advanced Topics ⭐⭐⭐⭐⭐
+
+Revise:
+
+* Global Fault Handler
+* Scope Fault Handler
+* Throw New Fault
+* Re-throw Fault
+* Stage File
+* Read File in Segments
+* Data Stitch
+* Lookups
+* Integration Properties
+* Tracking Variables
+* Business Events
+* Connectivity Agent
+* REST Trigger
+* SOAP Trigger
+* Scheduled Integration
+
+You're already studying these—just revise them well.
+
+---
+
+## 5. Git ⭐⭐⭐⭐
+
+Since the JD mentions Git.
+
+Know:
+
+```bash
+git init
+git clone
+git add
+git commit
+git push
+git pull
+git branch
+git checkout
+git merge
+git status
+```
+
+Also understand:
+
+* Branches
+* Pull Requests
+* Merge Conflicts
+
+---
+
+## 6. OCI ⭐⭐⭐⭐
+
+Revise:
+
+* IAM
+* VCN
+* API Gateway
+* Object Storage
+* Logging
+* Monitoring
+* Load Balancer
+
+---
+
+## 7. XML & XSLT ⭐⭐⭐⭐
+
+They mention:
+
+* XML
+* JSON
+* XSLT
+
+Revise:
+
+* XPath
+* XSLT Functions
+* XML Schema
+* Namespaces
+
+---
+
+## 8. OIC Monitoring ⭐⭐⭐⭐
+
+Revise:
+
+* Instance Tracking
+* Business Identifiers
+* Resubmit
+* Recover
+* Error Payload
+* Activity Stream
+
+---
+
+# Nice-to-Have
+
+These are bonus topics:
+
+* Docker (Basic)
+* Linux Commands
+* Jenkins
+* CI/CD
+* Event-driven Architecture
+
+---
+
+# Questions They Are Likely to Ask
+
+Since this is an **Oracle Integration & Data Engineer** role, expect questions like:
+
+### OIC
+
+* Explain App Driven vs Scheduled Integration.
+* What are Connectivity Agents?
+* Difference between REST and SOAP?
+* Explain Data Stitch.
+* What are Tracking Variables?
+* Explain Fault Handling.
+* Stage File vs FTP Adapter.
+* Explain Read File in Segments.
+* How do you improve OIC performance?
+* Difference between Throw New Fault and Re-throw Fault?
+
+### Oracle Fusion
+
+* How do you fetch data from Fusion?
+* REST vs BI Publisher?
+* ESS Jobs?
+* FBDI?
+* Business Events?
+
+### GoldenGate
+
+* Explain GoldenGate Architecture.
+* What is Extract?
+* What is Replicat?
+* What is Data Pump?
+* Difference between OIC and GoldenGate?
+
+### SQL
+
+* Difference between Procedure and Function.
+* MERGE statement.
+* Cursors.
+* Joins.
+* Indexes.
+
+### Git
+
+* Explain Git workflow.
+* Branching.
+* Pull Request.
+* Merge.
+
+---
+
+# Priority Study Plan (Before Interview)
+
+| Priority | Topic                                                 | Importance |
+| -------- | ----------------------------------------------------- | ---------- |
+| ⭐⭐⭐⭐⭐    | Oracle GoldenGate                                     | Critical   |
+| ⭐⭐⭐⭐⭐    | OIC Advanced (Fault Handling, Stage File, Monitoring) | Critical   |
+| ⭐⭐⭐⭐⭐    | PL/SQL                                                | Critical   |
+| ⭐⭐⭐⭐     | Git                                                   | High       |
+| ⭐⭐⭐⭐     | SQL Optimization                                      | High       |
+| ⭐⭐⭐⭐     | OCI Basics                                            | High       |
+| ⭐⭐⭐      | XSLT & XPath                                          | Medium     |
+| ⭐⭐⭐      | Linux Basics                                          | Medium     |
+
+## Your Match for This Role
+
+* **Current match:** ~80%
+* **After learning GoldenGate + PL/SQL + Git:** ~95%
+
+The **biggest differentiator** for this interview will be **Oracle GoldenGate**. If you become comfortable explaining its architecture (Extract → Data Pump → Trail Files → Replicat), along with your existing OIC and Oracle Fusion integration experience, you'll be well aligned with what Enigen is looking for.
