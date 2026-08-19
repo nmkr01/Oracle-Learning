@@ -1,10 +1,10 @@
-# 📘 Day 11 – Oracle ERP Security & Authentication in Oracle Integration Cloud (OIC)
+📘 Day 11 – Oracle ERP Security & Authentication in Oracle Integration Cloud (OIC)
 
-Welcome to **Day 11**. Security is one of the most important topics in Oracle Integration Cloud. Many interview questions focus on authentication, authorization, OAuth, JWT, certificates, and secure connections.
+Welcome to Day 11. Security is one of the most important topics in Oracle Integration Cloud. Many interview questions focus on authentication, authorization, OAuth, JWT, certificates, and secure connections.
 
 ---
 
-# 🎯 Learning Objectives
+🎯 Learning Objectives
 
 By the end of today, you'll understand:
 
@@ -22,13 +22,13 @@ By the end of today, you'll understand:
 
 ---
 
-# Why Security?
+Why Security?
 
 Every request sent to Oracle ERP must be authenticated.
 
 Without authentication:
 
-```text
+
 OIC
  │
  ▼
@@ -36,11 +36,11 @@ ERP
  │
  ▼
 ❌ Unauthorized (401)
-```
+
 
 With authentication:
 
-```text
+
 OIC
  │
  ▼
@@ -51,23 +51,23 @@ ERP
  │
  ▼
 ✅ Request Accepted
-```
+
 
 ---
 
-# Authentication vs Authorization
+Authentication vs Authorization
 
 Authentication
 
-> **Who are you?**
+> Who are you?
 
 Authorization
 
-> **What are you allowed to access?**
+> What are you allowed to access?
 
 Example:
 
-```text
+
 Login
  │
  ▼
@@ -78,13 +78,13 @@ Permission Check
  │
  ▼
 Authorization
-```
+
 
 ---
 
-# Oracle Identity Domain
+Oracle Identity Domain
 
-Oracle ERP Cloud uses **Identity Domains** to manage:
+Oracle ERP Cloud uses Identity Domains to manage:
 
 * Users
 * Groups
@@ -92,7 +92,7 @@ Oracle ERP Cloud uses **Identity Domains** to manage:
 * OAuth Clients
 * Applications
 
-```text
+
 Oracle Identity Domain
         │
         ├── Users
@@ -100,11 +100,11 @@ Oracle Identity Domain
         ├── OAuth Clients
         ├── Certificates
         └── Applications
-```
+
 
 ---
 
-# Authentication Methods
+Authentication Methods
 
 Oracle ERP supports:
 
@@ -118,16 +118,16 @@ Oracle ERP supports:
 
 ---
 
-# 1. Basic Authentication
+1. Basic Authentication
 
-```text
+
 Username
 Password
-```
+
 
 Flow:
 
-```text
+
 OIC
  │
  ▼
@@ -135,7 +135,7 @@ Username + Password
  │
  ▼
 ERP
-```
+
 
 Pros:
 
@@ -148,13 +148,13 @@ Cons:
 
 ---
 
-# 2. OAuth 2.0
+2. OAuth 2.0
 
 Most Oracle ERP REST APIs use OAuth.
 
 Flow:
 
-```text
+
 OIC
  │
  ▼
@@ -168,11 +168,11 @@ Access Token
  │
  ▼
 ERP REST API
-```
+
 
 ---
 
-# OAuth Components
+OAuth Components
 
 * Client ID
 * Client Secret
@@ -182,7 +182,7 @@ ERP REST API
 
 ---
 
-# OAuth Client Credentials Flow
+OAuth Client Credentials Flow
 
 Used for:
 
@@ -192,7 +192,7 @@ Used for:
 
 Flow:
 
-```text
+
 OIC
  │
  ▼
@@ -207,13 +207,13 @@ Access Token
  │
  ▼
 ERP REST API
-```
+
 
 No user interaction is required.
 
 ---
 
-# Authorization Code Flow
+Authorization Code Flow
 
 Used for:
 
@@ -223,7 +223,7 @@ Used for:
 
 Flow:
 
-```text
+
 User
  │
  ▼
@@ -237,17 +237,17 @@ Access Token
  │
  ▼
 ERP
-```
+
 
 ---
 
-# JWT Bearer Token
+JWT Bearer Token
 
-JWT stands for **JSON Web Token**.
+JWT stands for JSON Web Token.
 
 Structure:
 
-```text
+
 Header
 
 ↓
@@ -257,11 +257,11 @@ Payload
 ↓
 
 Signature
-```
+
 
 Flow:
 
-```text
+
 OIC
  │
  ▼
@@ -278,13 +278,13 @@ Access Token
  │
  ▼
 ERP
-```
+
 
 Commonly used in enterprise integrations.
 
 ---
 
-# WS-Security (SOAP)
+WS-Security (SOAP)
 
 SOAP services use WS-Security.
 
@@ -297,7 +297,7 @@ Header contains:
 
 Example:
 
-```xml
+xml
 <wsse:Security>
 
 <UsernameToken>
@@ -307,17 +307,17 @@ Example:
 <Signature>
 
 </wsse:Security>
-```
+
 
 ---
 
-# Certificates
+Certificates
 
 Certificates establish trust.
 
 Common formats:
 
-### JKS
+JKS
 
 Java KeyStore
 
@@ -328,7 +328,7 @@ Used by:
 
 ---
 
-### PKCS12 (.p12)
+PKCS12 (.p12)
 
 Contains:
 
@@ -342,9 +342,9 @@ Used for:
 
 ---
 
-# Certificate Flow
+Certificate Flow
 
-```text
+
 Private Key
       │
       ▼
@@ -358,20 +358,20 @@ Verify Signature
       │
       ▼
 Issue Token
-```
+
 
 ---
 
-# OIC Connection Security
+OIC Connection Security
 
 When creating a connection:
 
-```text
+
 Connection
      │
      ▼
 Security Policy
-```
+
 
 Examples:
 
@@ -383,11 +383,11 @@ Examples:
 
 ---
 
-# Real Project Example 1
+Real Project Example 1
 
 ERP REST Integration
 
-```text
+
 OIC
  │
  ▼
@@ -401,15 +401,15 @@ ERP REST API
  │
  ▼
 JSON Response
-```
+
 
 ---
 
-# Real Project Example 2
+Real Project Example 2
 
 SOAP ESS Job
 
-```text
+
 OIC
  │
  ▼
@@ -420,15 +420,15 @@ WS-Security
  │
  ▼
 submitESSJob
-```
+
 
 ---
 
-# Real Project Example 3
+Real Project Example 3
 
 JWT Authentication
 
-```text
+
 OIC
  │
  ▼
@@ -445,11 +445,11 @@ Access Token
  │
  ▼
 ERP REST API
-```
+
 
 ---
 
-# Authentication Methods Comparison
+Authentication Methods Comparison
 
 | Method      | Security  | Use Case          |
 | ----------- | --------- | ----------------- |
@@ -461,7 +461,7 @@ ERP REST API
 
 ---
 
-# Common Errors
+Common Errors
 
 | Error                | Meaning               |
 | -------------------- | --------------------- |
@@ -473,7 +473,7 @@ ERP REST API
 
 ---
 
-# Best Practices
+Best Practices
 
 * Prefer OAuth over Basic Authentication.
 * Store credentials securely in OIC Connections.
@@ -484,7 +484,7 @@ ERP REST API
 
 ---
 
-# Interview Questions
+Interview Questions
 
 1. What is the difference between Authentication and Authorization?
 2. Why is OAuth preferred over Basic Authentication?
@@ -499,7 +499,7 @@ ERP REST API
 
 ---
 
-# Assignment
+Assignment
 
 Design an OIC integration that:
 
@@ -512,34 +512,34 @@ Design an OIC integration that:
 
 ---
 
-# Quiz
+Quiz
 
-### 1. What is the difference between Authentication and Authorization?
+1. What is the difference between Authentication and Authorization?
 
-### 2. Why is OAuth Client Credentials commonly used for OIC integrations?
+2. Why is OAuth Client Credentials commonly used for OIC integrations?
 
-### 3. Explain the JWT authentication flow.
+3. Explain the JWT authentication flow.
 
-### 4. What is the difference between JKS and PKCS12 certificates?
+4. What is the difference between JKS and PKCS12 certificates?
 
-### 5. An OIC integration receives a **401 Unauthorized** response from Oracle ERP. What steps would you take to troubleshoot and resolve the issue?
+5. An OIC integration receives a 401 Unauthorized response from Oracle ERP. What steps would you take to troubleshoot and resolve the issue?
 
 ---
 
-# 📁 Save Today's Notes
+📁 Save Today's Notes
 
-```text
+
 D:\Nysh_Work\Oracle Integration Architect Roadmap\
 └── 01_ERP
     └── 03_ERP_Integration
         └── Day_011_Oracle_ERP_Security_Authentication.md
-```
+
 
 ---
 
-## 🚀 Tomorrow (Day 12)
+#🚀 Tomorrow (Day 12)
 
-We'll move into **Oracle ERP Business Objects & Integration Patterns**, where you'll learn:
+We'll move into Oracle ERP Business Objects & Integration Patterns, where you'll learn:
 
 * Oracle ERP business objects
 * Parent-child relationships

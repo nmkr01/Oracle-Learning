@@ -394,7 +394,46 @@ SOAP
             ↓
         Monitoring
 
+Scenario 1: Exception is Handled (Integration Continues)
+-----------------------------------
+    Start
+    │
+    ▼
+    Scope
+    ├── Invoke REST
+    ├── Invoke ERP  ❌ Exception
+    └── Scope Fault Handler
+            │
+            ├── Log Error
+            ├── Send Email
+            └── Mark Error as Handled
+                │
+                ▼
+    Continue with Next Activity
+        │
+        ▼
+    End
 
+
+Scenario 2: Exception is Not Handled
+----------------------
+    Start
+    │
+    ▼
+    Scope
+    ├── Invoke ERP ❌
+    └── Scope Fault Handler
+            │
+            ▼
+    Rethrow Exception
+            │
+            ▼
+    Global Fault Handler
+            │
+            ▼
+    Integration Ends
+
+    
 ---
 
 # Summary Table
